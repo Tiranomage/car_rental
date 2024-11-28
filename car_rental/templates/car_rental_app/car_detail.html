@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ car.brand }} {{ car.model }}</title>
+</head>
+<body>
+    <h1>{{ car.brand }} {{ car.model }}</h1>
+    <p>Год выпуска: {{ car.year }}</p>
+    <p>Цена за день: {{ car.price_per_day }}</p>
+    <p>Доступность: {% if car.is_available %}Да{% else %}Нет{% endif %}</p>
+    <a href="{% url 'booking_create' car.pk %}">Забронировать</a>
+</body>
+</html>
